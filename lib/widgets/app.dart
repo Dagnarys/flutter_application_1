@@ -6,25 +6,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.black,
-      
-      body: Container(     
-        decoration: const BoxDecoration(
-
-          image: DecorationImage(
-          
-            alignment: Alignment(0,-0.7),
-            image:AssetImage(
-              "assets/images/image.png",
-              ),
-            
-              ),
-            ),
-        height: double.infinity,
-        width: double.infinity,
-        child: const WordsWidget(),
-        )
+      body: WordsWidget()
       );
   
   }
@@ -35,9 +19,9 @@ class WordsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 365,
-      height: 370,
+    return Container(   
+      width: MediaQuery.sizeOf(context).width,
+      height:  MediaQuery.sizeOf(context).height,
       padding: const EdgeInsets.only(bottom: 30),     
         child: Column(  
           mainAxisAlignment:MainAxisAlignment.start,
@@ -45,7 +29,8 @@ class WordsWidget extends StatelessWidget {
           children: [      
             const Expanded(    
               child: SizedBox(),
-            ),     
+            ),
+            Image.asset('assets/images/image.png'),
             Container(
               width: 327,
               child: const Text(
@@ -56,8 +41,7 @@ class WordsWidget extends StatelessWidget {
                   fontWeight: FontWeight.w800,
                   fontFamily: 'Soro',
                   color: Colors.white,
-                  ),
-                  
+                  ),   
                   ),
             ),
             Container(
@@ -71,31 +55,25 @@ class WordsWidget extends StatelessWidget {
                   color: Color.fromRGBO(162, 162, 162, 1)),
                   ),
             ),
-              const SizedBox(height: 25,)
-                ,
-              
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromRGBO(198, 124, 78, 100),         
-                  fixedSize: const Size(327, 56),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))
-                  
+            const SizedBox(height: 25,)
+              ,         
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromRGBO(198, 124, 78, 100),         
+                fixedSize: const Size(327, 56),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16))
+              ),       
+              onPressed: () => null,
+                child: const Text(
+                'Get Started',    
+                style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w800,
                 ),
-                
-                onPressed: () => null,
-                
-                 child: const Text(
-                  'Get Started',    
-                  style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w800,
-      
-                  ),
-                 ),
-              )
+                ),
+            )
           ],
         ),
-      
     );
   }
 }
