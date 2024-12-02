@@ -15,6 +15,8 @@ class Textlocationwidget extends StatelessWidget {
         children: [
           Text('Location',textAlign: TextAlign.end,
            style: TextStyle(
+
+            color: Color.fromRGBO(230, 230, 230, 100),
             fontSize: 14, 
             fontWeight: FontWeight.w300
           ),),      
@@ -69,11 +71,17 @@ class _DropdownLocationState extends State<DropdownLocation> {
           value: location,
           child: Text('${location.city}, ${location.district}',
           style: const TextStyle(
+             
+            
+            color: Color.fromRGBO(230, 230, 230, 100),
             fontSize: 14, 
             fontWeight: FontWeight.w600
           ),), // Отображение имени
           );
       }).toList(),
+      dropdownColor: Color(0xFF313131),
+      underline: Container(),
+      borderRadius: BorderRadius.all(Radius.circular(15)),
       onChanged: (Location? newValue) {
         // This is called when the user selects an item.
         setState(() {
