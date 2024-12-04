@@ -10,30 +10,33 @@ class Example extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        //контейнер который определяет градиентный фон 
-      Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(colors: [
-            Color(0xFF313131),
-            Color(0xFF111111),
-          ],
-          begin: Alignment.bottomLeft,
-          end: Alignment.topRight,
+        //контейнер который определяет градиентный фон
+        Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFF313131),
+                Color(0xFF111111),
+              ],
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+            ),
           ),
+          height: 280,
         ),
-        height: 280,
-      ),
-      Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          const SizedBox(height: 68,),
-          Center(
-            //контейнер который определяет верхнюю часть экрана до промо
-            child: Container(
-              width: 327,
-              height: 140,
-              child: const Center(
-                child: Column(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 68,
+            ),
+            Center(
+              //контейнер который определяет верхнюю часть экрана до промо
+              child: Container(
+                width: 327,
+                height: 140,
+                child: const Center(
+                    child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -43,18 +46,15 @@ class Example extends StatelessWidget {
                     ),
                     SearchWidget(),
                   ],
-                )
+                )),
               ),
             ),
-          ),
-          SizedBox(height: 24,),
-          Container(
-            child: Promowidget(),
-            //add here promo
-          )
-
-        ],
-      ),
+            const SizedBox(
+              height: 24,
+            ),
+            const Promowidget()
+          ],
+        ),
       ],
     );
   }
