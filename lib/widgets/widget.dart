@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/widgets/PromoWidget.dart';
 import 'package:flutter_application_2/widgets/SearchWidget.dart';
 import 'package:flutter_application_2/widgets/TextLocationWidget.dart';
 
@@ -9,6 +10,7 @@ class Example extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        //контейнер который определяет градиентный фон 
       Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
@@ -26,6 +28,7 @@ class Example extends StatelessWidget {
         children: [
           const SizedBox(height: 68,),
           Center(
+            //контейнер который определяет верхнюю часть экрана до промо
             child: Container(
               width: 327,
               height: 140,
@@ -46,6 +49,7 @@ class Example extends StatelessWidget {
           ),
           SizedBox(height: 24,),
           Container(
+            child: Promowidget(),
             //add here promo
           )
 
