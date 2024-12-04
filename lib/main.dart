@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/widgets/widget.dart';
 
-
 void main() {
-  const app =  MyApp();
+  const app = MyApp();
   runApp(app);
 }
 
