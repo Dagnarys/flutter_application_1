@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/widgets/ChipsWidget.dart';
 import 'package:flutter_application_2/widgets/PromoWidget.dart';
 import 'package:flutter_application_2/widgets/SearchWidget.dart';
 import 'package:flutter_application_2/widgets/TextLocationWidget.dart';
@@ -52,7 +53,10 @@ class Example extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            const Promowidget()
+            const Promowidget(),
+            SizedBox(height: 14,),
+            Chipswidget(),
+            
           ],
         ),
       ],
