@@ -41,8 +41,8 @@ class Location {
 
 List<Location> listLocation = [
   Location(city: 'Blizen', district: 'Tanjungbalai'),
-  Location(city: 'Jakarta', district: 'Jakarta Selatan'),
-  Location(city: 'Surabaya', district: 'Kota Surabaya'),
+  Location(city: 'Jakarta', district: 'Selatan'),
+  Location(city: 'Surabaya', district: 'Kota'),
   Location(city: 'Medan', district: 'Sumatera Utara'),
 ];
 
